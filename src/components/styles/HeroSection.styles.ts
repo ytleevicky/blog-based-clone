@@ -15,6 +15,7 @@ export const HeroWrapper = styled.div`
   color: #000000;
   width: 100%;
   height: 100%;
+  margin-top: 55px;
 `;
 
 export const HeroDetails = styled.div`
