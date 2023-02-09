@@ -15,7 +15,7 @@ type ArticleProps = {
   articleID: number;
 };
 
-export const Article = (props: ArticleProps) => {
+export const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
   const [article, setArticle] = useState<{
     type: string;
     title: string;
@@ -26,7 +26,10 @@ export const Article = (props: ArticleProps) => {
   useEffect(() => {
     fetch(`https://hacker-news.firebaseio.com/v0/item/${props.articleID}.json`)
       .then((res) => res.json())
-      .then((json) => setArticle(json));
+      .then((json) => {
+        setArticle(json);
+        console.log(json);
+      });
   });
 
   return (
