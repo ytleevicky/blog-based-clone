@@ -1,11 +1,27 @@
- import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect } from "react";
+
+import {
+  ArticleH1,
+  ArticleP,
+  ArticleContainer,
+  ArticleImage,
+  ArticleInfo,
+  ArticleLink,
+} from "./styles/Article.styles";
+
+import tempImage from "../images/articleImage.png";
 
 type ArticleProps = {
-    articleID: number
-}
+  articleID: number;
+};
 
 export const Article = (props: ArticleProps) => {
-  const [article, setArticle] = useState<{type: string, title: string, text: string, url: string}>();
+  const [article, setArticle] = useState<{
+    type: string;
+    title: string;
+    text: string;
+    url: string;
+  }>();
 
   useEffect(() => {
     fetch(`https://hacker-news.firebaseio.com/v0/item/${props.articleID}.json`)
@@ -15,11 +31,23 @@ export const Article = (props: ArticleProps) => {
 
   return (
     <Fragment>
-      <h1>{article?.title}</h1>
+      <ArticleContainer>
+        <ArticleImage src={tempImage} />
 
-      { article?.text === undefined ? "" :  <div dangerouslySetInnerHTML={{ __html: `${article?.text}` }} /> }
-      
-      <a href={article?.url}>READ THIS ARTICLE</a>
+        <ArticleInfo>
+          <ArticleH1 href={article?.url}>{article?.title}</ArticleH1>
+
+          <ArticleP>
+            {article?.text === undefined ? (
+              ""
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: `${article?.text}` }} />
+            )}
+          </ArticleP>
+
+          <ArticleLink href={article?.url}>Read this article</ArticleLink>
+        </ArticleInfo>
+      </ArticleContainer>
     </Fragment>
   );
 };
