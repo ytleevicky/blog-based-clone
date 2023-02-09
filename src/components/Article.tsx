@@ -7,6 +7,7 @@ import {
   ArticleImage,
   ArticleInfo,
   ArticleLink,
+  ArticleDetails,
 } from "./styles/Article.styles";
 
 import tempImage from "../images/articleImage.png";
@@ -26,10 +27,7 @@ export const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
   useEffect(() => {
     fetch(`https://hacker-news.firebaseio.com/v0/item/${props.articleID}.json`)
       .then((res) => res.json())
-      .then((json) => {
-        setArticle(json);
-        console.log(json);
-      });
+      .then((json) => setArticle(json));
   });
 
   return (
@@ -44,7 +42,9 @@ export const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
             {article?.text === undefined ? (
               ""
             ) : (
-              <div dangerouslySetInnerHTML={{ __html: `${article?.text}` }} />
+              <ArticleDetails>
+                {article?.text.replaceAll(/(<([^>]+)>)/gi, "")}
+              </ArticleDetails>
             )}
           </ArticleP>
 

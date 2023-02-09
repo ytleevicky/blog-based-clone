@@ -32,6 +32,16 @@ export const ArticleP = styled.p`
   line-height: 1.5;
 `;
 
+export const ArticleDetails = styled.div`
+  height: 55px;
+
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+`;
+
 export const ArticleLink = styled.a`
   color: #000000e0;
   font-weight: 500;
