@@ -2,19 +2,28 @@ import styled from "styled-components";
 
 export const ArticleContainer = styled.div`
   margin: 10px 90px;
-  padding: 50px 0px;
+  padding-top: 20px;
+  padding-bottom: 60px;
   border-bottom: 2px solid #eee2d7;
   display: grid;
-  grid-template-columns: 35% 55%;
+  grid-template-columns: 30% 60%;
   grid-gap: 5%;
+  height: 400px;
+`;
+
+export const ImageContainer = styled.div`
+  height: auto;
+  overflow: hidden;
 `;
 
 export const ArticleImage = styled.img`
+  width: 100%;
   height: auto;
-  max-width: 100%;
 `;
 
-export const ArticleInfo = styled.div``;
+export const ArticleInfo = styled.div`
+  height: 60%;
+`;
 
 export const ArticleH1 = styled.a`
   text-decoration: none;
@@ -34,7 +43,6 @@ export const ArticleP = styled.p`
 
 export const ArticleDetails = styled.div`
   height: 55px;
-
   display: -webkit-box;
   max-width: 100%;
   -webkit-line-clamp: 2;

@@ -6,6 +6,7 @@ export const NavOptionsContainer = styled.div`
   border-bottom: 2px solid #eee2d7;
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 40px;
 `;
 
 export const NavOption = styled.a`

@@ -8,6 +8,7 @@ import {
   ArticleInfo,
   ArticleLink,
   ArticleDetails,
+  ImageContainer,
 } from "./styles/Article.styles";
 
 import tempImage from "../images/articleImage.png";
@@ -33,7 +34,9 @@ export const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
   return (
     <Fragment>
       <ArticleContainer>
-        <ArticleImage src={tempImage} />
+        <ImageContainer>
+          <ArticleImage src={tempImage} />
+        </ImageContainer>
 
         <ArticleInfo>
           <ArticleH1 href={article?.url}>{article?.title}</ArticleH1>
