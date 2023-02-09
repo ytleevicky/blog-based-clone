@@ -27,7 +27,7 @@ export const Article = (props: ArticleProps) => {
     fetch(`https://hacker-news.firebaseio.com/v0/item/${props.articleID}.json`)
       .then((res) => res.json())
       .then((json) => setArticle(json));
-  }, []);
+  });
 
   return (
     <Fragment>
