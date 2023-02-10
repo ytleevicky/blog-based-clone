@@ -12,6 +12,7 @@ export const ExploreP = styled.a`
   text-align: center;
   color: #cc835c;
   cursor: pointer;
+  text-decoration: none;
   margin-top: auto;
   padding-bottom: 30px;
 `;
@@ -23,4 +24,17 @@ export const ExploreTitle = styled.a`
   font-weight: 600;
   color: #000000e0;
   cursor: pointer;
+  text-decoration: none;
+
+  @media (max-width: 1024px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 30px;
+  }
 `;

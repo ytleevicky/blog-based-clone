@@ -9,8 +9,8 @@ export const ExploreHeader: React.FC = () => {
   return (
     <Fragment>
       <ExploreContainer>
-        <ExploreP>Discover more about mens health</ExploreP>
-        <ExploreTitle>Explore the Hims Journal</ExploreTitle>
+        <ExploreP href="/">Discover more about mens health</ExploreP>
+        <ExploreTitle href="/">Explore the Hims Journal</ExploreTitle>
       </ExploreContainer>
     </Fragment>
   );

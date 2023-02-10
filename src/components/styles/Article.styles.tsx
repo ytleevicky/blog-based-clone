@@ -9,6 +9,21 @@ export const ArticleContainer = styled.div`
   grid-template-columns: 30% 60%;
   grid-gap: 5%;
   height: 400px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 20px;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -27,8 +42,8 @@ export const ArticleInfo = styled.div`
 
 export const ArticleH1 = styled.a`
   text-decoration: none;
-  font-size: xx-large;
-  font-weight: 400;
+  font-size: 1.8em;
+  font-weight: 500;
   color: #000000e0;
   margin-top: 0px;
   line-height: 1.5;
