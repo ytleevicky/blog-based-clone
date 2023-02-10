@@ -2,12 +2,11 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Article } from "./Article";
 import { CustSpinner, SpinnerContainer } from "./styles/Navbar.styles";
 
-export const Articles: React.FC = () => {
+export const ArticlesShow: React.FC = () => {
   const [articles, setArticle] = useState([]);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    fetch(`https://hacker-news.firebaseio.com/v0/topstories.json`)
+    fetch(`https://hacker-news.firebaseio.com/v0/showstories.json`)
       .then((res) => res.json())
       .then((json) => {
         setArticle(json);

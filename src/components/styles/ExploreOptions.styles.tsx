@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components";
 
 export const NavOptionsContainer = styled.div`
@@ -9,7 +10,7 @@ export const NavOptionsContainer = styled.div`
   margin-bottom: 40px;
 `;
 
-export const NavOption = styled.a`
+export const NavOption = styled(Link)`
   color: #00000070;
   font-size: x-large;
   font-weight: 400;

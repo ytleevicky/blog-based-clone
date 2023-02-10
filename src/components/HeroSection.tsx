@@ -10,7 +10,7 @@ import {
 
 import heroImage from "../images/hims-hero.webp";
 
-export const HeroSection = () => {
+export const HeroSection: React.FC = () => {
   return (
     <Fragment>
       <HeroWrapper>

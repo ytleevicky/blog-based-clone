@@ -5,7 +5,7 @@ import {
   ExploreContainer,
 } from "./styles/ExploreHeader.styles";
 
-export const ExploreHeader = () => {
+export const ExploreHeader: React.FC = () => {
   return (
     <Fragment>
       <ExploreContainer>

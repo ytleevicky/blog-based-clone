@@ -1,3 +1,4 @@
+import { ClipLoader } from "react-spinners";
 import styled from "styled-components";
 
 export const Nav = styled.div`
@@ -18,4 +19,15 @@ export const Nav = styled.div`
   font-size: 2em;
   font-weight: bold;
   line-height: 1.4;
+`;
+
+export const CustSpinner = styled(ClipLoader)`
+  margin: auto auto;
+  width: 100%;
+`;
+
+export const SpinnerContainer = styled.div`
+  width: fit-content;
+  margin: 2rem auto;
+  padding: 0 auto;
 `;
