@@ -53,14 +53,17 @@ export const Article: React.FC<ArticleProps> = (props: ArticleProps) => {
   };
 
   useEffect(() => {
-    fetch(`https://hacker-news.firebaseio.com/v0/item/${props.articleID}.json`)
+    fetch(
+      `https://hacker-news.firebaseio.com/v0/item/${props.articleID}.json`,
+      { method: "GET" }
+    )
       .then((res) => res.json())
       .then(async (json) => {
         setArticle(json);
         setLoading(false);
         scrapeImage(json.url);
       });
-  }, []);
+  }, [props.articleID]);
 
   return (
     <Fragment>
